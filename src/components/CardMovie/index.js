@@ -34,9 +34,6 @@ const CardMovie = ({ data, type, onRemove, onEdit, onBookmark }) => {
           <Image
             alt="example"
             src={ImageNotFound}
-            layout={
-              data?.poster_path?.originFileObj || !isValid ? "" : "responsive"
-            }
             width={200}
             height={240}
             onError={handleError}
@@ -45,9 +42,6 @@ const CardMovie = ({ data, type, onRemove, onEdit, onBookmark }) => {
           <Image
             alt="example"
             src={loadGambar(data?.poster_path)}
-            layout={
-              data?.poster_path?.originFileObj || !isValid ? "" : "responsive"
-            }
             width={200}
             height={240}
             onError={handleError}

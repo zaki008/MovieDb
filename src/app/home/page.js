@@ -80,7 +80,7 @@ const Home = () => {
 
   const handleBookmark = (item) => {
     if (!item.is_bookmark) {
-      const data = [...listBookmark, { ...item, is_bookmark: true }];
+      const data = [{ ...item, is_bookmark: true }, ...listBookmark];
       dispatch(saveBookmark(data));
       return;
     }
