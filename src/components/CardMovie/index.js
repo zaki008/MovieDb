@@ -1,6 +1,7 @@
 import { Button, Card } from "antd";
 import Image from "next/image";
 
+import { ImageNotFound } from "@/assets/images";
 import Text from "antd/es/typography/Text";
 import moment from "moment";
 import { useState } from "react";
@@ -20,7 +21,6 @@ const CardMovie = ({ data, type, onRemove, onEdit, onBookmark }) => {
       if (isValid) {
         return `https://media.themoviedb.org/t/p/w220_and_h330_face/${data}`;
       }
-      return "https://dp3a.mataramkota.go.id/themes/kenshin-kenshinschool/assets/images/default.jpg";
     } catch (err) {
       console.log(err);
     }
@@ -30,16 +30,29 @@ const CardMovie = ({ data, type, onRemove, onEdit, onBookmark }) => {
     <Card
       hoverable
       cover={
-        <Image
-          alt="example"
-          src={loadGambar(data?.poster_path)}
-          layout={
-            data?.poster_path?.originFileObj || !isValid ? "" : "responsive"
-          }
-          width={200}
-          height={240}
-          onError={handleError}
-        />
+        !isValid ? (
+          <Image
+            alt="example"
+            src={ImageNotFound}
+            layout={
+              data?.poster_path?.originFileObj || !isValid ? "" : "responsive"
+            }
+            width={200}
+            height={240}
+            onError={handleError}
+          />
+        ) : (
+          <Image
+            alt="example"
+            src={loadGambar(data?.poster_path)}
+            layout={
+              data?.poster_path?.originFileObj || !isValid ? "" : "responsive"
+            }
+            width={200}
+            height={240}
+            onError={handleError}
+          />
+        )
       }
     >
       <h4 className={styles.twoLineText}>{data.title}</h4>
