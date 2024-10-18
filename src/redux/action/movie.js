@@ -21,7 +21,6 @@ export const getMovies = (setLoad, setData, movies) => async (dispatch) => {
     const res = await axios.get(
       `${API_HOST.baseUrl}/discover/movie?${queryString}`
     );
-    console.log("res movie", res);
     if (res) {
       setLoad(false);
       setData({
@@ -38,14 +37,12 @@ export const getMovies = (setLoad, setData, movies) => async (dispatch) => {
 };
 
 export const getSearhMovie = (movies) => async (dispatch) => {
-  console.log("test get", movies);
   try {
     dispatch({ type: IS_LOADING_MOVIE, value: true });
     const res = await axios.get(
       `${API_HOST.baseUrl}/search/movie?api_key=${API_KEY}&query=${movies.search}&page=${movies.page}`
     );
     if (res) {
-      console.log("res movie", res);
       dispatch({ type: IS_LOADING_MOVIE, value: false });
       const data = {
         ...movies,

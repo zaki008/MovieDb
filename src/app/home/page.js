@@ -37,8 +37,6 @@ const Home = () => {
     releaseDate: moment(),
   });
 
-  console.log("movie", movies);
-
   const handleChangeMovie = (updates) => {
     setMovies((prev) => ({
       ...prev,
@@ -87,8 +85,6 @@ const Home = () => {
     const data = listBookmark.filter((res) => res.id != item.id);
     dispatch(saveBookmark(data));
   };
-
-  console.log("listbookmark", listBookmark);
 
   const dataResult = movies?.results.map((item) => ({
     ...item,

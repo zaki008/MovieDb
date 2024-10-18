@@ -25,9 +25,7 @@ const SideBar = ({ movies, handleChangeMovie }) => {
       ),
     },
   ];
-  const onChange = (key) => {
-    console.log(key);
-  };
+  const onChange = (key) => {};
   return (
     <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
   );

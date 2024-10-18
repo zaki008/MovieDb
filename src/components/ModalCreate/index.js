@@ -70,7 +70,6 @@ const ModalCreate = ({
   };
 
   const handleSubmit = () => {
-    console.log("form", form);
     if (!validateCreateMovie(form)) {
       return;
     }
