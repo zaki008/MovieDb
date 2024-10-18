@@ -16,8 +16,6 @@ const Bookmark = () => {
     dispatch(saveBookmark(data));
   };
 
-  console.log("list bookmark", listBookmark);
-
   return (
     <Layout style={{ minHeight: "90vh" }}>
       <Content style={{ margin: 16 }}>
