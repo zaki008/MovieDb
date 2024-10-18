@@ -26,7 +26,7 @@ const Bookmark = () => {
           {listBookmark !== 0 &&
             listBookmark.map((movie, index) => {
               return (
-                <Col xl={4} lg={6} md={8} sm={8} xs={12}>
+                <Col xl={4} lg={6} md={8} sm={8} xs={12} key={movie.id}>
                   <CardMovie
                     key={index}
                     data={movie}

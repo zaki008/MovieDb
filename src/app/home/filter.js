@@ -17,7 +17,7 @@ const Filter = ({ movies, handleChangeMovie }) => {
 
   useEffect(() => {
     dispatch(getGenres());
-  }, []);
+  }, [dispatch]);
 
   const onChangeFromDate = (date, dateString) => {
     handleChangeMovie({

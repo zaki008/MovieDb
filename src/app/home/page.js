@@ -50,6 +50,7 @@ const Home = () => {
     dispatch(getMovies(setLoadMovie, handleChangeMovie, movies));
     window.scrollTo(0, 0);
   }, [
+    dispatch,
     movies.page,
     movies.sort_by,
     movies.with_genres,
