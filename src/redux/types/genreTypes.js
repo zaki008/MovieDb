@@ -1,0 +1,2 @@
+export const IS_LOADING_GENRE = "IS_LOADING_GENRE";
+export const SET_LIST_GENRE = "SET_LIST_GENRE";

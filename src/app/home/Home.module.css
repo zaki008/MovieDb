@@ -1,0 +1,21 @@
+.title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-right: 12px;
+}
+
+.sectionFilter {
+  margin-bottom: 20px;
+}
+
+.titleFilter {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.titleSubFilter {
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 12px;
+}

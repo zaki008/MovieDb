@@ -1,0 +1,1 @@
+export const SET_LIST_BOOKMARK = "SET_LIST_BOOKMARK";
